@@ -33,7 +33,7 @@ Download [Last release here.](../../releases/latest)
 Script (No installation required)
 
 ## Usage
-* Download
+* Download or Clone
 * Unzip
 * Copy ETHminerWachDogDmW.bat (Windows) or ETHminerWachDogDmW.sh (Linux) to ETHminer folder.
 * Modify the "Execution Code" section with your commands.
