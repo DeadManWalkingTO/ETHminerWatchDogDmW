@@ -1,7 +1,7 @@
 #========== Start ==========
 
 clear
-V=1.0.0
+V=1.5.2
 echo '###############################################################################'
 echo '#                                                                             #'
 echo '#  ETHminerWachDogDmW Version '$V'                                           #'
@@ -13,16 +13,35 @@ echo #
 
 #========== Initializing ==========
 
-#
+# Initializing CUDA Devices Number @ Start
+nvidia-smi --format=csv,noheader,nounits --query-gpu=utilization.gpu > CUDA.log
+a=($(wc CUDA.log))
+CUDAnumber=${a[0]}
+#words=${a[1]}
+#chars=${a[2]}
+echo System CUDA GPUs are $CUDAnumber.
 
 #========== Run Program ==========
 
-while true; do
+ProgramError=0
+while $ProgramError=0; do
 
 #========== Calc ==========
 
 loopnum=$((loopnum+1))
 pdate=`date '+%Y-%m-%d %H:%M'`
+
+if [ $loopnum > 1 ]
+then
+nvidia-smi --format=csv,noheader,nounits --query-gpu=utilization.gpu > CUDA.log
+a=($(wc CUDA.log))
+CUDAnumberCheck=${a[0]}
+ProgramError=1
+fi
+
+# If NO Error Run Normal
+if [ ProgramError=0 ]
+then
 
 #========== Screen Output ==========
 
@@ -47,10 +66,37 @@ echo >> RunTimes.log
 #setx GPU_MAX_ALLOC_PERCENT 100
 #setx GPU_SINGLE_ALLOC_PERCENT 100
 
-./ethminer -RH -U -S eu1.ethermine.org:4444 -O Wallet.Rig
+./ethminer -RH -U -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.test
 
 sleep 5
 
+fi
+
 done
+
+#========== Error Handling ==========
+
+#========== Error Screen Output ==========
+
+echo
+echo '###############################################################################'
+echo $pdate
+echo 'ETHminerWachDogDmW has run '$loopnum' times.'
+echo 'System CUDA GPU(s) '$CUDAnumber'. Working CUDA GPU(s) '$CUDAnumberCheck' .'
+echo 'System Restart Required.'
+echo '###############################################################################'
+echo
+
+#========== Error File Output ==========
+
+echo $pdate >> RunTimes.log
+echo 'ETHminerWachDogDmW has run '$loopnum' times.' >> RunTimes.log
+echo 'System CUDA GPU(s) '$CUDAnumber'. Working CUDA GPU(s) '$CUDAnumberCheck' .' >> RunTimes.log
+echo 'System Restart Required.' >> RunTimes.log
+echo >> RunTimes.log
+
+#========== System Reboot ==========
+
+shutdown -r now
 
 #========== EOF ==========
