@@ -1,5 +1,5 @@
 # ETHminerWachDogDmW
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](./README.md)
+[![HitCount](http://hits.dwyl.io/DeadManWalkingTO/ETHminerWachDogDmW.svg)](../../)
 [![GitHub release](https://img.shields.io/github/release/DeadManWalkingTO/ETHminerWachDogDmW/all.svg)](../../releases/latest)
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/DeadManWalkingTO/ETHminerWachDogDmW.svg)](../../releases/latest)
 [![GitHub top language](https://img.shields.io/github/languages/top/DeadManWalkingTO/ETHminerWachDogDmW.svg)](../../)
@@ -10,6 +10,7 @@
 [![Github commits (since latest release)](https://img.shields.io/github/commits-since/DeadManWalkingTO/ETHminerWachDogDmW/latest.svg)](../../)
 [![GitHub stars](https://img.shields.io/github/stars/DeadManWalkingTO/ETHminerWachDogDmW.svg)](../../stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/DeadManWalkingTO/ETHminerWachDogDmW.svg)](../../network)
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](./README.md)
 > ETHminer WachDog by DeadManWalking (DeadManWalkingTO-GitHub) 
 
 ETHminerWachDogDmW is a simple script (Windows/Linux) WachDog for ETHminer. 
