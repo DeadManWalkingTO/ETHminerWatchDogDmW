@@ -47,7 +47,7 @@ If you like please give a [GitHub Star](../../stargazers) (it's free!).
 
 ## License
 
-[MIT © DeadManWalking (DeadManWalkingTO-GitHub).](./LICENSE)
+[MIT © DeadManWalking (DeadManWalkingTO-GitHub)](./LICENSE).
 
 ## Donations
 
