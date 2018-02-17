@@ -32,13 +32,7 @@ ETHminerWatchDogDmW
 2. Restart ethminer up to 10 times.
 3. Reboot the system.
 
-* CUDA support removed because ethminer added --exit parameter to exit whenever an error occurred!
-* Old code (CUDA support) with few improovements >> ETHminerWatchDogDmWCuda
-
-ETHminerWatchDogDmWCuda (Discontinued)
-1. Run ethminer.
-2. Restart ethminer.
-3. Reboot the system if 1 (or more) CUDA devices fail.
+* CUDA support removed because ethminer added --exit parameter to exit whenever an error occurred! ([#757](https://github.com/ethereum-mining/ethminer/pull/757))
 
 ## Download
 Download [Last release here.](../../releases/latest)
