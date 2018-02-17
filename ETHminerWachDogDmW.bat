@@ -2,7 +2,7 @@ rem ========== Start ==========
 
 cls
 @echo OFF
-set V=1.5.2
+set V=1.7.1
 title ETHminerWachDogDmW Version %V% by: DeadManWalking
 echo ###############################################################################
 echo #                                                                             #
@@ -12,21 +12,42 @@ echo #  AUTHOR: DeadManWalking  (DeadManWalkingTO-GitHub)                       
 echo #                                                                             #
 echo ###############################################################################
 echo.
+echo ETHminerWachDogDmW
+echo 1. Run ethminer.
+echo 2. Restart ethminer up to 10 times.
+echo 3. Reboot the system.
+echo.
+
+rem Skip RunEthMinerCommand section at start
+goto Initializing
+
+rem ========== Run EthMiner Command ==========
+
+:RunEthMinerCommand
+
+rem ==================== Your Code Start Here ====================
+
+rem setx GPU_FORCE_64BIT_PTR 0
+rem setx GPU_MAX_HEAP_SIZE 100
+rem setx GPU_USE_SYNC_OBJECTS 1
+rem setx GPU_MAX_ALLOC_PERCENT 100
+rem setx GPU_SINGLE_ALLOC_PERCENT 100
+
+ethminer.exe -RH -U -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.test
+
+rem ==================== Your Code End Here ====================
+
+goto EndEthMinerCommand
 
 rem ========== Initializing ==========
+
+:Initializing
 
 rem Set Paths etc
 set "batchPath=%~0"
 set "batchName=%%~nk"
 setlocal & pushd .
 cd /d %~dp0
-
-rem Initializing CUDA Devices Number @ Start
-C:\Program Files\NVIDIA Corporation\NVSMI>nvidia-smi --format=csv,noheader,nounits --query-gpu=utilization.gpu > CUDA.log
-setlocal EnableDelayedExpansion
-set "cmd=findstr /R /N "^^" CUDA.log | find /C ":""
-for /f %%a in ('!cmd!') do set CUDAnumber=%%a
-echo System CUDA GPUs are %CUDAnumber%
 
 rem ========== Run Program ==========
 
@@ -39,21 +60,7 @@ set /A loopnum=loopnum+1
 for /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set pdate=%%c-%%a-%%b)
 for /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set ptime=%%a:%%b)
 
-rem First Time Skip CUDAcheck
-if %loopnum%==1 goto OutPut
-
-:CUDAcheck
-rem calc CUDA devices Number Check
-C:\Program Files\NVIDIA Corporation\NVSMI>nvidia-smi --format=csv,noheader,nounits --query-gpu=utilization.gpu > CUDA.log
-setlocal EnableDelayedExpansion
-set "cmd=findstr /R /N "^^" CUDA.log | find /C ":""
-for /f %%a in ('!cmd!') do set CUDAnumberCheck=%%a
-rem GoTo Error Handling
-if %CUDAnumber% <> %CUDAnumberCheck% goto ProgramError
-
 rem ========== Output ==========
-
-:OutPut
 
 rem ========== Screen Output ==========
 
@@ -72,21 +79,21 @@ echo. >> RunTimes.log
 
 rem ========== Execution Code ==========
 
-rem setx GPU_FORCE_64BIT_PTR 0
-rem setx GPU_MAX_HEAP_SIZE 100
-rem setx GPU_USE_SYNC_OBJECTS 1
-rem setx GPU_MAX_ALLOC_PERCENT 100
-rem setx GPU_SINGLE_ALLOC_PERCENT 100
+goto RunEthMinerCommand
+:EndEthMinerCommand
 
-ethminer.exe -RH -U -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.test
-
+rem Wait 5s
 timeout 5 > NUL
 
+rem Check 10 loops
+if %loopnum% > 10 goto ErrorHandling
+
+rem loop
 goto runProgram
 
 rem ========== Error Handling ==========
 
-:ProgramError
+:ErrorHandling
 
 rem ========== Error Screen Output ==========
 
@@ -94,8 +101,11 @@ echo.
 echo ###############################################################################
 echo %pdate% %ptime%
 echo ETHminerWachDogDmW has run %loopnum% times.
-echo System CUDA GPU(s) %CUDAnumber%. Working CUDA GPU(s) %CUDAnumberCheck%.
 echo System Restart Required.
+echo.
+echo.
+echo.
+echo Reboot Now (%pdate% %ptime%).
 echo ###############################################################################
 echo.
 
@@ -103,8 +113,11 @@ rem ========== Error File Output ==========
 
 echo %pdate% %ptime% >> RunTimes.log
 echo ETHminerWachDogDmW has run %loopnum% times. >> RunTimes.log
-echo System CUDA GPU(s) %CUDAnumber%. Working CUDA GPU(s) %CUDAnumberCheck%. >> RunTimes.log
 echo System Restart Required. >> RunTimes.log
+echo. >> RunTimes.log
+echo. >> RunTimes.log
+echo. >> RunTimes.log
+echo Reboot Now (%pdate% %ptime%). >> RunTimes.log
 echo. >> RunTimes.log
 
 rem ========== System Reboot ==========
