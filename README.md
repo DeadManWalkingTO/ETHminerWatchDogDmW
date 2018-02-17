@@ -1,19 +1,19 @@
 # ETHminerWachDogDmW
-[![HitCount](http://hits.dwyl.io/DeadManWalkingTO/ETHminerWachDogDmW.svg)](../../)
-[![GitHub release](https://img.shields.io/github/release/DeadManWalkingTO/ETHminerWachDogDmW/all.svg)](../../releases/latest)
-[![GitHub Release Date](https://img.shields.io/github/release-date-pre/DeadManWalkingTO/ETHminerWachDogDmW.svg)](../../releases/latest)
-[![GitHub top language](https://img.shields.io/github/languages/top/DeadManWalkingTO/ETHminerWachDogDmW.svg)](../../)
-[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/DeadManWalkingTO/ETHminerWachDogDmW.svg)](../../)
-[![GitHub license](https://img.shields.io/github/license/DeadManWalkingTO/ETHminerWachDogDmW.svg)](./LICENSE)
+[![HitCount](http://hits.dwyl.io/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
+[![GitHub release](https://img.shields.io/github/release/DeadManWalkingTO/ETHminerWatchDogDmW/all.svg)](../../releases/latest)
+[![GitHub Release Date](https://img.shields.io/github/release-date-pre/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../releases/latest)
+[![GitHub top language](https://img.shields.io/github/languages/top/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
+[![GitHub license](https://img.shields.io/github/license/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](./LICENSE)
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/DeadManWalkingTO/ETHminerWachDogDmW.svg)](../../)
-[![Github commits (since latest release)](https://img.shields.io/github/commits-since/DeadManWalkingTO/ETHminerWachDogDmW/latest.svg)](../../)
-[![GitHub stars](https://img.shields.io/github/stars/DeadManWalkingTO/ETHminerWachDogDmW.svg)](../../stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/DeadManWalkingTO/ETHminerWachDogDmW.svg)](../../network)
+[![GitHub last commit](https://img.shields.io/github/last-commit/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
+[![Github commits (since latest release)](https://img.shields.io/github/commits-since/DeadManWalkingTO/ETHminerWatchDogDmW/latest.svg)](../../)
+[![GitHub stars](https://img.shields.io/github/stars/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../network)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](./README.md)
 > ETHminer WachDog by DeadManWalking (DeadManWalkingTO-GitHub) 
 
-ETHminerWachDogDmW is a simple script (Windows/Linux) WachDog for ETHminer. 
+ETHminerWatchDogDmW is a simple script (Windows/Linux) WachDog for ETHminer. 
 
 ## Table of Contents
 - [Features](#features)
@@ -27,15 +27,15 @@ ETHminerWachDogDmW is a simple script (Windows/Linux) WachDog for ETHminer.
 ## Features
 Simple script (Windows/Linux) WachDog for ETHminer. 
 
-ETHminerWachDogDmW
+ETHminerWatchDogDmW
 1. Run ethminer.
 2. Restart ethminer up to 10 times.
 3. Reboot the system.
 
 * CUDA support removed because ethminer added --exit parameter to exit whenever an error occurred!
-* Old code (CUDA support) with few improovements >> ETHminerWachDogDmWCuda
+* Old code (CUDA support) with few improovements >> ETHminerWatchDogDmWCuda
 
-ETHminerWachDogDmWCuda (Discontinued)
+ETHminerWatchDogDmWCuda (Discontinued)
 1. Run ethminer.
 2. Restart ethminer.
 3. Reboot the system if 1 (or more) CUDA devices fail.
@@ -49,7 +49,7 @@ Script (No installation required)
 ## Usage
 * Download or Clone
 * Unzip
-* Copy ETHminerWachDogDmW.bat (Windows) or ETHminerWachDogDmW.sh (Linux) to ETHminer folder.
+* Copy ETHminerWatchDogDmW.bat (Windows) or ETHminerWatchDogDmW.sh (Linux) to ETHminer folder.
 * Modify the code between:
   * ==================== Your Code Start Here ====================
   * ==================== Your Code End Here ====================
