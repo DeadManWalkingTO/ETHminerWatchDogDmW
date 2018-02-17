@@ -27,6 +27,19 @@ ETHminerWachDogDmW is a simple script (Windows/Linux) WachDog for ETHminer.
 ## Features
 Simple script (Windows/Linux) WachDog for ETHminer. 
 
+ETHminerWachDogDmW
+1. Run ethminer.
+2. Restart ethminer up to 10 times.
+3. Reboot the system.
+
+* CUDA support removed because ethminer added --exit parameter to exit whenever an error occurred!
+* Old code (CUDA support) with few improovements >> ETHminerWachDogDmWCuda
+
+ETHminerWachDogDmWCuda (Discontinued)
+1. Run ethminer.
+2. Restart ethminer.
+3. Reboot the system if 1 (or more) CUDA devices fail.
+
 ## Download
 Download [Last release here.](../../releases/latest)
 
@@ -37,7 +50,9 @@ Script (No installation required)
 * Download or Clone
 * Unzip
 * Copy ETHminerWachDogDmW.bat (Windows) or ETHminerWachDogDmW.sh (Linux) to ETHminer folder.
-* Modify the "Execution Code" section with your commands.
+* Modify the code between:
+  * ==================== Your Code Start Here ====================
+  * ==================== Your Code End Here ====================
 * Run the script.
 
 ## Feedback
