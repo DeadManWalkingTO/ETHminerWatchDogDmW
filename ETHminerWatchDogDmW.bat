@@ -2,7 +2,7 @@ rem ========== Start ==========
 
 cls
 @echo OFF
-set V=1.7.1
+set V=1.7.2
 title ETHminerWatchDogDmW Version %V% by: DeadManWalking
 echo ###############################################################################
 echo #                                                                             #
