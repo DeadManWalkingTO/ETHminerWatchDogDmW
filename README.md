@@ -11,7 +11,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../network)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](./README.md)
-> ETHminer WachDog by DeadManWalking (DeadManWalkingTO-GitHub) 
+> ETHminer WatchDog by DeadManWalking (DeadManWalkingTO-GitHub) 
 
 ETHminerWatchDogDmW is a simple script (Windows/Linux) WachDog for ETHminer. 
 
