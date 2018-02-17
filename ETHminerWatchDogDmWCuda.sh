@@ -6,7 +6,7 @@ clear
 V=1.6.3
 echo '###############################################################################'
 echo '#                                                                             #'
-echo '#  ETHminerWachDogDmW Version '$V'                                           #'
+echo '#  ETHminerWatchDogDmW Version '$V'                                          #'
 echo '#                                                                             #'
 echo '#  AUTHOR: DeadManWalking  (DeadManWalkingTO-GitHub)                          #'
 echo '#                                                                             #'
@@ -70,14 +70,14 @@ then
 echo #
 echo '###############################################################################'
 echo $pdate
-echo 'ETHminerWachDogDmW has run '$loopnum' times.'
+echo 'ETHminerWatchDogDmW has run '$loopnum' times.'
 echo '###############################################################################'
 echo #
 
 #========== File Output ==========
 
 echo $pdate >> RunTimes.log
-echo ETHminerWachDogDmW has run $loopnum times. >> RunTimes.log
+echo ETHminerWatchDogDmW has run $loopnum times. >> RunTimes.log
 echo >> RunTimes.log
 
 #========== Execution Code ==========
@@ -98,7 +98,7 @@ done
 echo
 echo '###############################################################################'
 echo $pdate
-echo 'ETHminerWachDogDmW has run '$loopnum' times.'
+echo 'ETHminerWatchDogDmW has run '$loopnum' times.'
 echo 'System CUDA GPU(s) '$CUDAnumber'. Working CUDA GPU(s) '$CUDAnumberCheck' .'
 echo 'System Restart Required.'
 echo '###############################################################################'
@@ -107,7 +107,7 @@ echo
 #========== Error File Output ==========
 
 echo $pdate >> RunTimes.log
-echo 'ETHminerWachDogDmW has run '$loopnum' times.' >> RunTimes.log
+echo 'ETHminerWatchDogDmW has run '$loopnum' times.' >> RunTimes.log
 echo 'System CUDA GPU(s) '$CUDAnumber'. Working CUDA GPU(s) '$CUDAnumberCheck' .' >> RunTimes.log
 echo 'System Restart Required.' >> RunTimes.log
 echo >> RunTimes.log
