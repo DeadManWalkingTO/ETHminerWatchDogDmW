@@ -1,4 +1,4 @@
-# ETHminerWachDogDmW
+# ETHminerWatchDogDmW
 [![HitCount](http://hits.dwyl.io/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
 [![GitHub release](https://img.shields.io/github/release/DeadManWalkingTO/ETHminerWatchDogDmW/all.svg)](../../releases/latest)
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../releases/latest)
