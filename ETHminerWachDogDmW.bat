@@ -43,12 +43,6 @@ rem ========== Initializing ==========
 
 :Initializing
 
-rem Set Paths etc
-set "batchPath=%~0"
-set "batchName=%%~nk"
-setlocal & pushd .
-cd /d %~dp0
-
 rem ========== Run Program ==========
 
 :runProgram
