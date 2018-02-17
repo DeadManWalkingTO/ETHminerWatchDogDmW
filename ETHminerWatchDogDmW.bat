@@ -3,16 +3,16 @@ rem ========== Start ==========
 cls
 @echo OFF
 set V=1.7.1
-title ETHminerWachDogDmW Version %V% by: DeadManWalking
+title ETHminerWatchDogDmW Version %V% by: DeadManWalking
 echo ###############################################################################
 echo #                                                                             #
-echo #  ETHminerWachDogDmW Version %V%                                           #
+echo #  ETHminerWatchDogDmW Version %V%                                          #
 echo #                                                                             #
 echo #  AUTHOR: DeadManWalking  (DeadManWalkingTO-GitHub)                          #
 echo #                                                                             #
 echo ###############################################################################
 echo.
-echo ETHminerWachDogDmW
+echo ETHminerWatchDogDmW
 echo 1. Run ethminer.
 echo 2. Restart ethminer up to 10 times.
 echo 3. Reboot the system.
@@ -61,14 +61,14 @@ rem ========== Screen Output ==========
 echo.
 echo ###############################################################################
 echo %pdate% %ptime%
-echo ETHminerWachDogDmW has run %loopnum% times.
+echo ETHminerWatchDogDmW has run %loopnum% times.
 echo ###############################################################################
 echo.
 
 rem ========== File Output ==========
 
 echo %pdate% %ptime% >> RunTimes.log
-echo ETHminerWachDogDmW has run %loopnum% times. >> RunTimes.log
+echo ETHminerWatchDogDmW has run %loopnum% times. >> RunTimes.log
 echo. >> RunTimes.log
 
 rem ========== Execution Code ==========
@@ -94,7 +94,7 @@ rem ========== Error Screen Output ==========
 echo.
 echo ###############################################################################
 echo %pdate% %ptime%
-echo ETHminerWachDogDmW has run %loopnum% times.
+echo ETHminerWatchDogDmW has run %loopnum% times.
 echo System Restart Required.
 echo.
 echo.
@@ -106,7 +106,7 @@ echo.
 rem ========== Error File Output ==========
 
 echo %pdate% %ptime% >> RunTimes.log
-echo ETHminerWachDogDmW has run %loopnum% times. >> RunTimes.log
+echo ETHminerWatchDogDmW has run %loopnum% times. >> RunTimes.log
 echo System Restart Required. >> RunTimes.log
 echo. >> RunTimes.log
 echo. >> RunTimes.log
