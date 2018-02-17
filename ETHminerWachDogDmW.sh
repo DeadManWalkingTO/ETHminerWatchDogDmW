@@ -12,7 +12,11 @@ echo '#  AUTHOR: DeadManWalking  (DeadManWalkingTO-GitHub)                      
 echo '#                                                                             #'
 echo '###############################################################################'
 echo #
-
+echo 'ETHminerWachDogDmW'
+echo '1. Run ethminer.'
+echo '2. Restart ethminer up to 10 times.'
+echo '3. Reboot the system.'
+echo #
 
 #========== Run EthMiner Command ==========
 
