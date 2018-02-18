@@ -51,7 +51,7 @@ rem ========== Calc ==========
 
 rem Calc Date & Time 
 set /A loopnum=loopnum+1
-for /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set pdate=%%c-%%a-%%b)
+for /f "tokens=1-4 delims=/ " %%a in ('date /t') do (set pdate=%%c-%%a-%%b)
 for /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set ptime=%%a:%%b)
 
 rem ========== Output ==========
