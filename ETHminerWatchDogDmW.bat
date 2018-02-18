@@ -1,7 +1,11 @@
 rem ========== Pre ==========
+@echo OFF
+setlocal
+
+rem Switch to the batch file's directory
+cd /d %~dp0
 
 set V=1.7.3
-@echo OFF
 chcp 437
 
 rem ========== Start ==========
@@ -53,7 +57,7 @@ rem ========== Run Program ==========
 
 rem ========== Calc ==========
 
-rem Calc Date & Time 
+rem Calc Date & Time
 set /A loopnum=loopnum+1
 for /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set pdate=%%c-%%a-%%b)
 for /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set ptime=%%a:%%b)
@@ -123,3 +127,5 @@ rem ========== System Reboot ==========
 shutdown -r -f -t 0
 
 rem ========== EOF ==========
+
+endlocal
