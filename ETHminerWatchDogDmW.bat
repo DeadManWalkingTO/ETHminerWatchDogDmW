@@ -5,7 +5,7 @@ rem Don't echo to standard output
 rem Set Localisation of Environment Variables
 setlocal
 rem Set version info
-set V=1.7.4
+set V=1.7.5
 rem Switch to the batch file's directory
 cd /d %~dp0
 rem Auto Fix #385 issue of Ethminer
@@ -62,10 +62,40 @@ rem ========== Run Program ==========
 
 rem ========== Calc ==========
 
-rem Calc Date & Time
 set /A loopnum=loopnum+1
+
+rem Calc Date & Time
+:DateTime
+rem Check WMIC is available
+WMIC.EXE Alias /? >nul 2>&1 || goto wmicError
+rem Use WMIC to retrieve date and time
+for /F "skip=1 tokens=1-6" %%G in ('WMIC Path Win32_LocalTime Get Day^,Hour^,Minute^,Month^,Second^,Year /Format:table') do (
+   IF "%%~L"=="" goto wmicDone
+      set _yyyy=%%L
+      set _mm=00%%J
+      set _dd=00%%G
+      set _hour=00%%H
+      set _minute=00%%I
+)
+:wmicDone
+
+rem Pad digits with leading zeros
+      set _mm=%_mm:~-2%
+      set _dd=%_dd:~-2%
+      set _hour=%_hour:~-2%
+      set _minute=%_minute:~-2%
+
+rem Date/time in ISO 8601 format:
+set pisodate=%_yyyy%-%_mm%-%_dd% %_hour%:%_minute%
+
+goto DateTimeOK
+
+:wmicError
 for /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set pdate=%%c-%%a-%%b)
 for /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set ptime=%%a:%%b)
+set pisodate= %pdate% %ptime%
+
+:DateTimeOK
 
 rem ========== Output ==========
 
@@ -73,14 +103,14 @@ rem ========== Screen Output ==========
 
 echo.
 echo ###############################################################################
-echo %pdate% %ptime%
+echo %pisodate%
 echo ETHminerWatchDogDmW has run %loopnum% times.
 echo ###############################################################################
 echo.
 
 rem ========== File Output ==========
 
-echo %pdate% %ptime% >> RunTimes.log
+echo %pisodate% >> RunTimes.log
 echo ETHminerWatchDogDmW has run %loopnum% times. >> RunTimes.log
 echo. >> RunTimes.log
 
@@ -106,25 +136,25 @@ rem ========== Error Screen Output ==========
 
 echo.
 echo ###############################################################################
-echo %pdate% %ptime%
+echo %pisodate%
 echo ETHminerWatchDogDmW has run %loopnum% times.
 echo System Restart Required.
 echo.
 echo.
 echo.
-echo Reboot Now (%pdate% %ptime%).
+echo Reboot Now (%pisodate%).
 echo ###############################################################################
 echo.
 
 rem ========== Error File Output ==========
 
-echo %pdate% %ptime% >> RunTimes.log
+echo %pisodate% >> RunTimes.log
 echo ETHminerWatchDogDmW has run %loopnum% times. >> RunTimes.log
 echo System Restart Required. >> RunTimes.log
 echo. >> RunTimes.log
 echo. >> RunTimes.log
 echo. >> RunTimes.log
-echo Reboot Now (%pdate% %ptime%). >> RunTimes.log
+echo Reboot Now (%pisodate%). >> RunTimes.log
 echo. >> RunTimes.log
 
 rem ========== System Reboot ==========
