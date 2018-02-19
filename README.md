@@ -21,6 +21,8 @@ ETHminerWatchDogDmW is a simple script (Windows/Linux) WachDog for ETHminer.
 - [Install](#install)
 - [Usage](#usage)
 - [Feedback](#feedback)
+- [Maintainers](#maintainers)
+- [Contribute](#contribute)
 - [License](#license)
 - [Donations](#donations)
 
