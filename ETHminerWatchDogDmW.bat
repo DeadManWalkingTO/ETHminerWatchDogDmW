@@ -1,8 +1,12 @@
+rem ========== Pre ==========
+
+set V=1.7.3
+@echo OFF
+chcp 437
+
 rem ========== Start ==========
 
 cls
-@echo OFF
-set V=1.7.2
 title ETHminerWatchDogDmW Version %V% by: DeadManWalking
 echo ###############################################################################
 echo #                                                                             #
