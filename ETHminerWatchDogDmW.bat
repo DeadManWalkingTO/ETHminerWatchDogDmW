@@ -1,12 +1,17 @@
 rem ========== Pre ==========
-@echo OFF
-setlocal
 
+rem Don't echo to standard output
+@echo off
+rem Set Localisation of Environment Variables
+setlocal
+rem Set version info
+set V=1.7.4
 rem Switch to the batch file's directory
 cd /d %~dp0
-
-set V=1.7.3
+rem Auto Fix #385 issue of Ethminer
 chcp 437
+rem Set title
+title ETHminer WatchDog Version %V% by: DeadManWalking
 
 rem ========== Start ==========
 
