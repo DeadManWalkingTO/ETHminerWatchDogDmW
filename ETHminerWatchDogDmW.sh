@@ -3,7 +3,7 @@
 #========== Pre ==========
 
 #Set version info
-V=1.7.4
+V=1.7.5
 
 #========== Start ==========
 
@@ -51,20 +51,21 @@ while $ProgramError=0; do
 #========== Calc ==========
 
 loopnum=$((loopnum+1))
-pdate=`date '+%Y-%m-%d %H:%M'`
+
+pisodate=`date '+%Y-%m-%d %H:%M'`
 
 #========== Screen Output ==========
 
 echo #
 echo '###############################################################################'
-echo $pdate
+echo $pisodate
 echo 'ETHminerWatchDogDmW has run '$loopnum' times.'
 echo '###############################################################################'
 echo #
 
 #========== File Output ==========
 
-echo $pdate >> RunTimes.log
+echo $pisodate >> RunTimes.log
 echo ETHminerWatchDogDmW has run $loopnum times. >> RunTimes.log
 echo >> RunTimes.log
 
@@ -89,25 +90,25 @@ done
 
 echo
 echo '###############################################################################'
-echo $pdate
+echo $pisodate
 echo 'ETHminerWatchDogDmW has run '$loopnum' times.'
 echo 'System Restart Required.'
 echo
 echo
 echo
-echo 'Reboot Now ('$pdate')'
+echo 'Reboot Now ('$pisodate')'
 echo '###############################################################################'
 echo
 
 #========== Error File Output ==========
 
-echo $pdate >> RunTimes.log
+echo $pisodate >> RunTimes.log
 echo 'ETHminerWatchDogDmW has run '$loopnum' times.' >> RunTimes.log
 echo 'System Restart Required.' >> RunTimes.log
 echo >> RunTimes.log
 echo >> RunTimes.log
 echo >> RunTimes.log
-echo 'Reboot Now ('$pdate')' >> RunTimes.log
+echo 'Reboot Now ('$pisodate')' >> RunTimes.log
 echo >> RunTimes.log
 
 #========== System Reboot ==========
