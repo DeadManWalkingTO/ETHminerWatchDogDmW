@@ -126,6 +126,8 @@ rem ========== System Reboot ==========
 
 shutdown -r -f -t 0
 
-rem ========== EOF ==========
+rem ========== END ==========
 
 endlocal
+
+rem ========== EOF ==========
