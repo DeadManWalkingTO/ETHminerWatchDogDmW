@@ -1,22 +1,19 @@
-rem ========== Pre ==========
+rem ========== PreStart ==========
 
 rem Don't echo to standard output
 @echo off
 rem Set Localisation of Environment Variables
 setlocal
 rem Set version info
-set V=1.7.5
+set V=1.7.6
 rem Switch to the batch file's directory
 cd /d %~dp0
-rem Auto Fix #385 issue of Ethminer
-chcp 437
 rem Set title
 title ETHminer WatchDog Version %V% by: DeadManWalking
 
 rem ========== Start ==========
 
 cls
-title ETHminerWatchDogDmW Version %V% by: DeadManWalking
 echo ###############################################################################
 echo #                                                                             #
 echo #  ETHminerWatchDogDmW Version %V%                                          #
@@ -40,21 +37,25 @@ rem ========== Run EthMiner Command ==========
 
 rem ==================== Your Code Start Here ====================
 
-rem setx GPU_FORCE_64BIT_PTR 0
-rem setx GPU_MAX_HEAP_SIZE 100
-rem setx GPU_USE_SYNC_OBJECTS 1
-rem setx GPU_MAX_ALLOC_PERCENT 100
-rem setx GPU_SINGLE_ALLOC_PERCENT 100
+setx GPU_FORCE_64BIT_PTR 0
+setx GPU_MAX_HEAP_SIZE 100
+setx GPU_USE_SYNC_OBJECTS 1
+setx GPU_MAX_ALLOC_PERCENT 100
+setx GPU_SINGLE_ALLOC_PERCENT 100
 
-ethminer.exe -RH -U -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.test
+ethminer.exe -RH -X -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.test
 
 rem ==================== Your Code End Here ====================
 
-goto EndEthMinerCommand
+exit /B
 
 rem ========== Initializing ==========
 
 :Initializing
+rem Auto Fix #385 issue of Ethminer
+chcp 437
+rem set loop to zero
+set /A loopnum=0
 
 rem ========== Run Program ==========
 
@@ -62,6 +63,7 @@ rem ========== Run Program ==========
 
 rem ========== Calc ==========
 
+rem loop inc by one
 set /A loopnum=loopnum+1
 
 rem Calc Date & Time
@@ -86,14 +88,14 @@ rem Pad digits with leading zeros
       set _minute=%_minute:~-2%
 
 rem Date/time in ISO 8601 format:
-set pisodate=%_yyyy%-%_mm%-%_dd% %_hour%:%_minute%
+set pISOdate=%_yyyy%-%_mm%-%_dd% %_hour%:%_minute%
 
 goto DateTimeOK
 
 :wmicError
 for /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set pdate=%%c-%%a-%%b)
 for /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set ptime=%%a:%%b)
-set pisodate= %pdate% %ptime%
+set pISOdate= %pdate% %ptime%
 
 :DateTimeOK
 
@@ -103,21 +105,20 @@ rem ========== Screen Output ==========
 
 echo.
 echo ###############################################################################
-echo %pisodate%
+echo %pISOdate%
 echo ETHminerWatchDogDmW has run %loopnum% times.
 echo ###############################################################################
 echo.
 
 rem ========== File Output ==========
 
-echo %pisodate% >> RunTimes.log
+echo %pISOdate% >> RunTimes.log
 echo ETHminerWatchDogDmW has run %loopnum% times. >> RunTimes.log
 echo. >> RunTimes.log
 
 rem ========== Execution Code ==========
 
-goto RunEthMinerCommand
-:EndEthMinerCommand
+call :RunEthMinerCommand
 
 rem Wait 5s
 timeout 5 > NUL
@@ -136,25 +137,25 @@ rem ========== Error Screen Output ==========
 
 echo.
 echo ###############################################################################
-echo %pisodate%
+echo %pISOdate%
 echo ETHminerWatchDogDmW has run %loopnum% times.
 echo System Restart Required.
 echo.
 echo.
 echo.
-echo Reboot Now (%pisodate%).
+echo Reboot Now (%pISOdate%).
 echo ###############################################################################
 echo.
 
 rem ========== Error File Output ==========
 
-echo %pisodate% >> RunTimes.log
+echo %pISOdate% >> RunTimes.log
 echo ETHminerWatchDogDmW has run %loopnum% times. >> RunTimes.log
 echo System Restart Required. >> RunTimes.log
 echo. >> RunTimes.log
 echo. >> RunTimes.log
 echo. >> RunTimes.log
-echo Reboot Now (%pisodate%). >> RunTimes.log
+echo Reboot Now (%pISOdate%). >> RunTimes.log
 echo. >> RunTimes.log
 
 rem ========== System Reboot ==========
