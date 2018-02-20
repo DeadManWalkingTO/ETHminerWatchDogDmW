@@ -5,7 +5,7 @@ rem Don't echo to standard output
 rem Set Localisation of Environment Variables
 setlocal
 rem Set version info
-set V=1.7.6
+set V=1.8.0
 rem Switch to the batch file's directory
 cd /d %~dp0
 rem Set title
@@ -42,12 +42,11 @@ setx GPU_MAX_HEAP_SIZE 100
 setx GPU_USE_SYNC_OBJECTS 1
 setx GPU_MAX_ALLOC_PERCENT 100
 setx GPU_SINGLE_ALLOC_PERCENT 100
-
 ethminer.exe -RH -X -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.test
 
 rem ==================== Your Code End Here ====================
 
-exit /B
+exit /b
 
 rem ========== Initializing ==========
 
@@ -60,6 +59,7 @@ set /A loopnum=0
 rem ========== Run Program ==========
 
 :runProgram
+echo run
 
 rem ========== Calc ==========
 
@@ -124,7 +124,7 @@ rem Wait 5s
 timeout 5 > NUL
 
 rem Check 10 loops
-if %loopnum% > 10 goto ErrorHandling
+if %loopnum% gtr 9 goto ErrorHandling
 
 rem loop
 goto runProgram
