@@ -3,7 +3,7 @@
 #========== PreStart ==========
 
 #Set version info
-V=1.7.6
+V=1.8.0
 
 #========== Start ==========
 
@@ -43,11 +43,12 @@ setx GPU_SINGLE_ALLOC_PERCENT 100
 
 #========== Initializing ==========
 
-ProgramError=0
+loopnum=$((0))
 
 #========== Run Program ==========
 
-while $ProgramError=0; do
+while [ $loopnum -le 9 ]
+do
 
 #========== Calc ==========
 
@@ -76,12 +77,6 @@ RunEthMinerCommand
 
 #Wait 5s
 sleep 5
-
-#Check 10 loops
-if [ $loopnum > 10 ]
-then
-ProgramError=1
-fi
 
 done
 
