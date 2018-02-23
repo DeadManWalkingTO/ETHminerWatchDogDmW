@@ -34,7 +34,7 @@ ETHminerWatchDogDmW
 2. Restart ethminer up to 10 times.
 3. Reboot the system.
 
-* CUDA support removed because ethminer added --exit parameter to exit whenever an error occurred! ([#757](https://github.com/ethereum-mining/ethminer/pull/757))
+* CUDA support removed because ethminer added --exit parameter to exit whenever an error occurred! ([#757] P.R.)
 * Auto Fix [#189] issue of Ethminer.
 * Auto Fix [#385] issue of Ethminer.
 
