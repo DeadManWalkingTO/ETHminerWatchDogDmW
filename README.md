@@ -35,8 +35,8 @@ ETHminerWatchDogDmW
 3. Reboot the system.
 
 * CUDA support removed because ethminer added --exit parameter to exit whenever an error occurred! ([#757] P.R.)
-* Auto Fix [#189] issue of Ethminer.
-* Auto Fix [#385] issue of Ethminer.
+* AutoFix [#189] issue of Ethminer.
+* AutoFix [#385] issue of Ethminer.
 
 ## Download
 Download [Last release here.](../../releases/latest)
