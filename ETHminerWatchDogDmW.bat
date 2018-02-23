@@ -5,7 +5,7 @@ rem Don't echo to standard output
 rem Set Localisation of Environment Variables
 setlocal
 rem Set version info
-set V=1.8.1
+set V=1.8.2
 rem Switch to the batch file's directory
 cd /d %~dp0
 rem Set title
@@ -26,6 +26,10 @@ echo ETHminerWatchDogDmW
 echo 1. Run ethminer.
 echo 2. Restart ethminer up to 10 times.
 echo 3. Reboot the system.
+echo.
+echo Additional
+echo AutoFix #385 issue of Ethminer
+echo AutoFix #189 issue of Ethminer
 echo.
 
 rem Skip RunEthMinerCommand section at start
@@ -51,7 +55,7 @@ exit /b
 rem ========== Initializing ==========
 
 :Initializing
-rem Auto Fix #385 #189 issue of Ethminer
+rem set codepage
 chcp 65001
 rem set loop to zero
 set /A loopnum=0
