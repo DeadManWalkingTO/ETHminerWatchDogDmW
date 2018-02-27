@@ -13,7 +13,8 @@
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](./README.md)
 > ETHminer WatchDog by DeadManWalking (DeadManWalkingTO-GitHub) 
 
-ETHminerWatchDogDmW is a simple script (Windows/Linux) WachDog for ETHminer. 
+ETHminerWatchDogDmW is a simple script (Windows/Linux) WachDog for ETHminer.
+Working on Windows (7/8/10) [x86/x64] and Linux (Any Dist/Any Ver/Any Arch).
 
 ## Table of Contents
 - [Features](#features)
