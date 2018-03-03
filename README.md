@@ -52,8 +52,8 @@ Script (No installation required)
 * Unzip
 * Copy ETHminerWatchDogDmW.bat (Windows) or ETHminerWatchDogDmW.sh (Linux) to ETHminer folder.
 * Modify the code between:
-  * ==================== Your Code Start Here ====================
-  * ==================== Your Code End Here ====================
+  * ==================== Your Code Starts Here ====================
+  * ==================== Your Code Ends Here ====================
 * Run the script.
 
 ## Feedback

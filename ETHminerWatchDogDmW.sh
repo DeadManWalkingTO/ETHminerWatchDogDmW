@@ -29,7 +29,7 @@ echo #
 RunEthMinerCommand()
 {
 
-#==================== Your Code Start Here ====================
+#==================== Your Code Starts Here ====================
 
 setx GPU_FORCE_64BIT_PTR 0
 setx GPU_MAX_HEAP_SIZE 100
@@ -39,7 +39,7 @@ setx GPU_SINGLE_ALLOC_PERCENT 100
 
 ./ethminer -RH -X -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
 
-#==================== Your Code End Here ====================
+#==================== Your Code Ends Here ====================
 
 }
 
