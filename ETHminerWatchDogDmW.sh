@@ -3,17 +3,17 @@
 #========== PreStart ==========
 
 #Set version info
-V=1.8.3
+V=1.8.4
 
 #========== Start ==========
 
 clear
 echo '###############################################################################'
-echo '#                                                                             #'
-echo '#  ETHminerWatchDogDmW Version '$V'                                          #'
-echo '#                                                                             #'
-echo '#  AUTHOR: DeadManWalking  (DeadManWalkingTO-GitHub)                          #'
-echo '#                                                                             #'
+echo #
+echo '  ETHminerWatchDogDmW Version '$V
+echo #
+echo '  AUTHOR: DeadManWalking  (DeadManWalkingTO-GitHub)'
+echo #
 echo '###############################################################################'
 echo #
 echo 'ETHminerWatchDogDmW'
@@ -21,7 +21,7 @@ echo '1. Run ethminer.'
 echo '2. Restart ethminer up to 10 times.'
 echo '3. Reboot the system.'
 echo #
-echo Log file RunTimes.log
+echo 'Log file RunTimes.log'
 echo #
 
 #========== Run EthMiner Command ==========
@@ -113,6 +113,6 @@ echo >> RunTimes.log
 
 shutdown -r now
 
-#========== END ==========
+#========== End ==========
 
-#========== EOF ==========
+#========== EoF ==========
