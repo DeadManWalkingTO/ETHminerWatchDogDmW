@@ -5,7 +5,7 @@ rem Don't echo to standard output
 rem Set Localisation of Environment Variables
 setlocal
 rem Set version info
-set V=1.8.2
+set V=1.8.3
 rem Switch to the batch file's directory
 cd /d %~dp0
 rem Set title
@@ -30,6 +30,7 @@ echo.
 echo Additional
 echo AutoFix #385 issue of Ethminer
 echo AutoFix #189 issue of Ethminer
+echo Log file RunTimes.log
 echo.
 
 rem Skip RunEthMinerCommand section at start
@@ -46,7 +47,7 @@ setx GPU_MAX_HEAP_SIZE 100
 setx GPU_USE_SYNC_OBJECTS 1
 setx GPU_MAX_ALLOC_PERCENT 100
 setx GPU_SINGLE_ALLOC_PERCENT 100
-ethminer.exe -RH -X -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.test
+ethminer.exe -RH -X -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
 
 rem ==================== Your Code End Here ====================
 
