@@ -3,7 +3,7 @@
 #========== PreStart ==========
 
 #Set version info
-V=1.8.2
+V=1.8.3
 
 #========== Start ==========
 
@@ -21,6 +21,8 @@ echo '1. Run ethminer.'
 echo '2. Restart ethminer up to 10 times.'
 echo '3. Reboot the system.'
 echo #
+echo Log file RunTimes.log
+echo #
 
 #========== Run EthMiner Command ==========
 
@@ -35,7 +37,7 @@ setx GPU_USE_SYNC_OBJECTS 1
 setx GPU_MAX_ALLOC_PERCENT 100
 setx GPU_SINGLE_ALLOC_PERCENT 100
 
-./ethminer -RH -X -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.test
+./ethminer -RH -X -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
 
 #==================== Your Code End Here ====================
 
