@@ -5,7 +5,7 @@ rem Don't echo to standard output
 rem Set Localisation of Environment Variables
 setlocal
 rem Set version info
-set V=1.8.3
+set V=1.8.4
 rem Switch to the batch file's directory
 cd /d %~dp0
 rem Set title
@@ -15,11 +15,11 @@ rem ========== Start ==========
 
 cls
 echo ###############################################################################
-echo #                                                                             #
-echo #  ETHminerWatchDogDmW Version %V%                                          #
-echo #                                                                             #
-echo #  AUTHOR: DeadManWalking  (DeadManWalkingTO-GitHub)                          #
-echo #                                                                             #
+echo.
+echo   ETHminerWatchDogDmW Version %V%
+echo.
+echo   AUTHOR: DeadManWalking  (DeadManWalkingTO-GitHub)
+echo.
 echo ###############################################################################
 echo.
 echo ETHminerWatchDogDmW
@@ -167,8 +167,8 @@ rem ========== System Reboot ==========
 
 shutdown -r -f -t 0
 
-rem ========== END ==========
+rem ========== End ==========
 
 endlocal
 
-rem ========== EOF ==========
+rem ========== EoF ==========
