@@ -5,7 +5,7 @@ rem Don't echo to standard output
 rem Set Localisation of Environment Variables
 setlocal
 rem Set version info
-set V=1.8.4
+set V=1.8.5
 rem Switch to the batch file's directory
 cd /d %~dp0
 rem Set title
@@ -60,6 +60,7 @@ rem set codepage
 chcp 65001
 rem set loop to zero
 set /A loopnum=0
+echo ETHminerWatchDogDmW Version %V% >> RunTimes.log
 
 rem ========== Run Program ==========
 
@@ -109,10 +110,10 @@ rem ========== Output ==========
 rem ========== Screen Output ==========
 
 echo.
-echo ###############################################################################
+echo ===============================================================================
 echo %pISOdate%
 echo ETHminerWatchDogDmW has run %loopnum% times.
-echo ###############################################################################
+echo ===============================================================================
 echo.
 
 rem ========== File Output ==========
@@ -131,7 +132,7 @@ timeout 5 > NUL
 rem Check 10 loops
 if %loopnum% gtr 9 goto ErrorHandling
 
-rem loop
+rem Loop
 goto runProgram
 
 rem ========== Error Handling ==========
@@ -141,7 +142,7 @@ rem ========== Error Handling ==========
 rem ========== Error Screen Output ==========
 
 echo.
-echo ###############################################################################
+echo ===============================================================================
 echo %pISOdate%
 echo ETHminerWatchDogDmW has run %loopnum% times.
 echo System Restart Required.
