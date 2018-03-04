@@ -3,7 +3,7 @@
 #========== PreStart ==========
 
 #Set version info
-V=1.8.4
+V=1.8.5
 
 #========== Start ==========
 
@@ -46,6 +46,7 @@ setx GPU_SINGLE_ALLOC_PERCENT 100
 #========== Initializing ==========
 
 loopnum=$((0))
+echo 'ETHminerWatchDogDmW Version '%V% >> RunTimes.log
 
 #========== Run Program ==========
 
@@ -61,10 +62,10 @@ pISOdate=`date '+%Y-%m-%d %H:%M'`
 #========== Screen Output ==========
 
 echo #
-echo '###############################################################################'
+echo '==============================================================================='
 echo $pISOdate
 echo 'ETHminerWatchDogDmW has run '$loopnum' times.'
-echo '###############################################################################'
+echo '==============================================================================='
 echo #
 
 #========== File Output ==========
@@ -78,7 +79,7 @@ echo >> RunTimes.log
 RunEthMinerCommand
 
 #Wait 5s
-sleep 5
+sleep 5s
 
 done
 
@@ -87,7 +88,7 @@ done
 #========== Error Screen Output ==========
 
 echo
-echo '###############################################################################'
+echo '==============================================================================='
 echo $pISOdate
 echo 'ETHminerWatchDogDmW has run '$loopnum' times.'
 echo 'System Restart Required.'
