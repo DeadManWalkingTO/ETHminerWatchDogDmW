@@ -13,7 +13,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../network)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](./README.md)
 
-> [ETHminer](https://github.com/ethereum-mining/ethminer) WatchDog by DeadManWalking (DeadManWalkingTO-GitHub)
+> [ETHminer](https://github.com/ethereum-mining/ethminer) WatchDog by [DeadManWalking (DeadManWalkingTO-GitHub)](https://github.com/DeadManWalkingTO)
 
 ETHminerWatchDogDmW is a simple script (Windows/Linux) WachDog for [ETHminer](https://github.com/ethereum-mining/ethminer).
 
