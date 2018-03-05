@@ -5,7 +5,7 @@ rem Don't echo to standard output
 rem Set Localisation of Environment Variables
 setlocal
 rem Set version info
-set V=1.8.5
+set V=1.8.6
 rem Switch to the batch file's directory
 cd /d %~dp0
 rem Set title
@@ -47,7 +47,7 @@ setx GPU_MAX_HEAP_SIZE 100
 setx GPU_USE_SYNC_OBJECTS 1
 setx GPU_MAX_ALLOC_PERCENT 100
 setx GPU_SINGLE_ALLOC_PERCENT 100
-ethminer.exe -RH -X -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
+ethminer.exe -RH -X --exit -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
 
 rem ==================== Your Code Ends Here ====================
 
@@ -60,7 +60,10 @@ rem set codepage
 chcp 65001
 rem set loop to zero
 set /A loopnum=0
-echo ETHminerWatchDogDmW Version %V% >> RunTimes.log
+set FileOut=RunTimes.log
+echo. >> %FileOut%
+echo ETHminerWatchDogDmW Version %V% >> %FileOut%
+echo. >> %FileOut%
 
 rem ========== Run Program ==========
 
@@ -118,9 +121,9 @@ echo.
 
 rem ========== File Output ==========
 
-echo %pISOdate% >> RunTimes.log
-echo ETHminerWatchDogDmW has run %loopnum% times. >> RunTimes.log
-echo. >> RunTimes.log
+echo %pISOdate% >> %FileOut%
+echo ETHminerWatchDogDmW has run %loopnum% times. >> %FileOut%
+echo. >> %FileOut%
 
 rem ========== Execution Code ==========
 
@@ -155,14 +158,14 @@ echo.
 
 rem ========== Error File Output ==========
 
-echo %pISOdate% >> RunTimes.log
-echo ETHminerWatchDogDmW has run %loopnum% times. >> RunTimes.log
-echo System Restart Required. >> RunTimes.log
-echo. >> RunTimes.log
-echo. >> RunTimes.log
-echo. >> RunTimes.log
-echo Reboot Now (%pISOdate%). >> RunTimes.log
-echo. >> RunTimes.log
+echo %pISOdate% >> %FileOut%
+echo ETHminerWatchDogDmW has run %loopnum% times. >> %FileOut%
+echo System Restart Required. >> %FileOut%
+echo. >> %FileOut%
+echo. >> %FileOut%
+echo. >> %FileOut%
+echo Reboot Now (%pISOdate%). >> %FileOut%
+echo. >> %FileOut%
 
 rem ========== System Reboot ==========
 
