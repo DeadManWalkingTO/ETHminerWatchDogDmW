@@ -3,7 +3,7 @@
 #========== PreStart ==========
 
 #Set version info
-V=1.8.7
+V=1.8.9
 
 #========== Start ==========
 
@@ -49,7 +49,6 @@ loopnum=$((0))
 FileOut=RunTimes.log
 echo >> $FileOut
 echo 'ETHminerWatchDogDmW Version '$V >> $FileOut
-echo >> $FileOut
 
 #========== Run Program ==========
 
@@ -73,9 +72,7 @@ echo #
 
 #========== File Output ==========
 
-echo $pISOdate >> $FileOut
-echo ETHminerWatchDogDmW has run $loopnum times. >> $FileOut
-echo >> $FileOut
+echo $pISOdate ETHminerWatchDogDmW has run $loopnum times. >> $FileOut
 
 #========== Execution Code ==========
 
@@ -104,13 +101,8 @@ echo
 
 #========== Error File Output ==========
 
-echo $pISOdate >> $FileOut
-echo 'ETHminerWatchDogDmW has run '$loopnum' times.' >> $FileOut
-echo 'System Restart Required.' >> $FileOut
-echo >> $FileOut
-echo >> $FileOut
-echo >> $FileOut
-echo 'Reboot Now ('$pISOdate')' >> $FileOut
+echo $pISOdate' ETHminerWatchDogDmW has run '$loopnum' times.' >> $FileOut
+echo 'System Restart Required. Reboot Now ('$pISOdate').' >> $FileOut
 echo >> $FileOut
 
 #========== System Reboot ==========
