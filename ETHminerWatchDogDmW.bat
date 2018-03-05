@@ -5,9 +5,11 @@ rem Don't echo to standard output
 rem Set Localisation of Environment Variables
 setlocal
 rem Set version info
-set V=1.8.6
+set V=1.8.7
 rem Switch to the batch file's directory
 cd /d %~dp0
+rem set codepage
+chcp 437
 rem Set title
 title ETHminer WatchDog Version %V% by: DeadManWalking
 
@@ -56,8 +58,6 @@ exit /b
 rem ========== Initializing ==========
 
 :Initializing
-rem set codepage
-chcp 65001
 rem set loop to zero
 set /A loopnum=0
 set FileOut=RunTimes.log
@@ -68,7 +68,6 @@ echo. >> %FileOut%
 rem ========== Run Program ==========
 
 :runProgram
-echo run
 
 rem ========== Calc ==========
 
