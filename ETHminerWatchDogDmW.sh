@@ -3,7 +3,7 @@
 #========== PreStart ==========
 
 #Set version info
-V=1.8.5
+V=1.8.6
 
 #========== Start ==========
 
@@ -37,7 +37,7 @@ setx GPU_USE_SYNC_OBJECTS 1
 setx GPU_MAX_ALLOC_PERCENT 100
 setx GPU_SINGLE_ALLOC_PERCENT 100
 
-./ethminer -RH -X -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
+./ethminer -RH -X --exit -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
 
 #==================== Your Code Ends Here ====================
 
@@ -46,7 +46,10 @@ setx GPU_SINGLE_ALLOC_PERCENT 100
 #========== Initializing ==========
 
 loopnum=$((0))
-echo 'ETHminerWatchDogDmW Version '%V% >> RunTimes.log
+FileOut=RunTimes.log
+echo >> $FileOut
+echo 'ETHminerWatchDogDmW Version '$V >> $FileOut
+echo >> $FileOut
 
 #========== Run Program ==========
 
@@ -70,9 +73,9 @@ echo #
 
 #========== File Output ==========
 
-echo $pISOdate >> RunTimes.log
-echo ETHminerWatchDogDmW has run $loopnum times. >> RunTimes.log
-echo >> RunTimes.log
+echo $pISOdate >> $FileOut
+echo ETHminerWatchDogDmW has run $loopnum times. >> $FileOut
+echo >> $FileOut
 
 #========== Execution Code ==========
 
@@ -101,14 +104,14 @@ echo
 
 #========== Error File Output ==========
 
-echo $pISOdate >> RunTimes.log
-echo 'ETHminerWatchDogDmW has run '$loopnum' times.' >> RunTimes.log
-echo 'System Restart Required.' >> RunTimes.log
-echo >> RunTimes.log
-echo >> RunTimes.log
-echo >> RunTimes.log
-echo 'Reboot Now ('$pISOdate')' >> RunTimes.log
-echo >> RunTimes.log
+echo $pISOdate >> $FileOut
+echo 'ETHminerWatchDogDmW has run '$loopnum' times.' >> $FileOut
+echo 'System Restart Required.' >> $FileOut
+echo >> $FileOut
+echo >> $FileOut
+echo >> $FileOut
+echo 'Reboot Now ('$pISOdate')' >> $FileOut
+echo >> $FileOut
 
 #========== System Reboot ==========
 
