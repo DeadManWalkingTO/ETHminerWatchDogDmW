@@ -5,7 +5,7 @@ rem Don't echo to standard output
 rem Set Localisation of Environment Variables
 setlocal
 rem Set version info
-set V=1.8.7
+set V=1.8.9
 rem Switch to the batch file's directory
 cd /d %~dp0
 rem set codepage
@@ -63,7 +63,6 @@ set /A loopnum=0
 set FileOut=RunTimes.log
 echo. >> %FileOut%
 echo ETHminerWatchDogDmW Version %V% >> %FileOut%
-echo. >> %FileOut%
 
 rem ========== Run Program ==========
 
@@ -120,9 +119,7 @@ echo.
 
 rem ========== File Output ==========
 
-echo %pISOdate% >> %FileOut%
-echo ETHminerWatchDogDmW has run %loopnum% times. >> %FileOut%
-echo. >> %FileOut%
+echo %pISOdate% ETHminerWatchDogDmW has run %loopnum% times. >> %FileOut%
 
 rem ========== Execution Code ==========
 
@@ -157,13 +154,8 @@ echo.
 
 rem ========== Error File Output ==========
 
-echo %pISOdate% >> %FileOut%
-echo ETHminerWatchDogDmW has run %loopnum% times. >> %FileOut%
-echo System Restart Required. >> %FileOut%
-echo. >> %FileOut%
-echo. >> %FileOut%
-echo. >> %FileOut%
-echo Reboot Now (%pISOdate%). >> %FileOut%
+echo %pISOdate% ETHminerWatchDogDmW has run %loopnum% times. >> %FileOut%
+echo System Restart Required. Reboot Now (%pISOdate%). >> %FileOut%
 echo. >> %FileOut%
 
 rem ========== System Reboot ==========
