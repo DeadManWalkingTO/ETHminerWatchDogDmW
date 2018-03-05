@@ -3,7 +3,7 @@
 #========== PreStart ==========
 
 #Set version info
-V=1.8.9
+V=1.9.0
 
 #========== Start ==========
 
@@ -47,7 +47,6 @@ setx GPU_SINGLE_ALLOC_PERCENT 100
 
 loopnum=$((0))
 FileOut=RunTimes.log
-echo >> $FileOut
 echo 'ETHminerWatchDogDmW Version '$V >> $FileOut
 
 #========== Run Program ==========
@@ -103,6 +102,7 @@ echo
 
 echo $pISOdate' ETHminerWatchDogDmW has run '$loopnum' times.' >> $FileOut
 echo 'System Restart Required. Reboot Now ('$pISOdate').' >> $FileOut
+echo >> $FileOut
 echo >> $FileOut
 
 #========== System Reboot ==========
