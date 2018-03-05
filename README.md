@@ -86,14 +86,10 @@ Feel free to open an [Issue](../../issues/new) or submit [Pull Requests](../../p
 
 If you find this useful please donate something at the following:
 
-BTC
-* 15G2BTErGg3i8zTmLfKYStUKtqDLXz6Jc9
+BTC `15G2BTErGg3i8zTmLfKYStUKtqDLXz6Jc9`
 
-ETH
-* 0x7013275311fc37ccc1e40193D75086293eCb43A4
+ETH `0x7013275311fc37ccc1e40193D75086293eCb43A4`
 
-Monero (XMR)
-* 41s1ALMHsW8EiYU31NCT3nWJqsShgZJXQGwXUsTbb8TdfDtiEfPrjeCiqDD3pZ5q2uAsgPM6ykJ3DYDUsZk2LJ7xFmbWaLS
+XMR `41s1ALMHsW8EiYU31NCT3nWJqsShgZJXQGwXUsTbb8TdfDtiEfPrjeCiqDD3pZ5q2uAsgPM6ykJ3DYDUsZk2LJ7xFmbWaLS`
 
-AEON
-* WmssXd9iiPCjjhfVyqYvPzhBuPKkZ5wkVXP5q8L7aYxfPJG5Z8nLyLJXUzxMeuvna9dCEBAmqBzCRWezF6AQqUS51EDJtjAYL
+AEON `WmssXd9iiPCjjhfVyqYvPzhBuPKkZ5wkVXP5q8L7aYxfPJG5Z8nLyLJXUzxMeuvna9dCEBAmqBzCRWezF6AQqUS51EDJtjAYL`
