@@ -3,7 +3,7 @@
 #========== PreStart ==========
 
 #Set version info
-V=1.9.0
+V=1.9.1
 
 #========== Start ==========
 
@@ -21,7 +21,8 @@ echo '1. Run ethminer.'
 echo '2. Restart ethminer up to 10 times.'
 echo '3. Reboot the system.'
 echo #
-echo 'Log file RunTimes.log'
+echo 'Additional:'
+echo '- Log file RunTimes.log'
 echo #
 
 #========== Run EthMiner Command ==========
@@ -37,7 +38,7 @@ setx GPU_USE_SYNC_OBJECTS 1
 setx GPU_MAX_ALLOC_PERCENT 100
 setx GPU_SINGLE_ALLOC_PERCENT 100
 
-./ethminer -RH -X --exit -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
+./ethminer -RH -X -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
 
 #==================== Your Code Ends Here ====================
 
@@ -56,8 +57,10 @@ do
 
 #========== Calc ==========
 
+#Increment loop by one
 loopnum=$((loopnum+1))
 
+#Calculate Date & Time
 pISOdate=`date '+%Y-%m-%d %H:%M'`
 
 #========== Screen Output ==========
@@ -71,7 +74,7 @@ echo #
 
 #========== File Output ==========
 
-echo $pISOdate ETHminerWatchDogDmW has run $loopnum times. >> $FileOut
+echo $pISOdate ETHminerWatchDogDmW has run $loopnum times.>>$FileOut
 
 #========== Execution Code ==========
 
@@ -90,20 +93,20 @@ echo
 echo '==============================================================================='
 echo $pISOdate
 echo 'ETHminerWatchDogDmW has run '$loopnum' times.'
-echo 'System Restart Required.'
+echo 'System restart required.'
 echo
 echo
 echo
-echo 'Reboot Now ('$pISOdate')'
+echo 'Rebooting now ('$pISOdate').'
 echo '###############################################################################'
 echo
 
 #========== Error File Output ==========
 
-echo $pISOdate' ETHminerWatchDogDmW has run '$loopnum' times.' >> $FileOut
-echo 'System Restart Required. Reboot Now ('$pISOdate').' >> $FileOut
-echo >> $FileOut
-echo >> $FileOut
+echo $pISOdate' ETHminerWatchDogDmW has run '$loopnum' times.'>>$FileOut
+echo 'System restart required. Rebooting now ('$pISOdate').'>>$FileOut
+echo >>$FileOut
+echo >>$FileOut
 
 #========== System Reboot ==========
 
