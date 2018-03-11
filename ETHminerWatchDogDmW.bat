@@ -5,20 +5,20 @@ rem Don't echo to standard output
 rem Make script variables local
 setlocal
 rem Set version info
-set V=1.9.0
+set V=1.9.1
 rem Switch to the batch file's directory
 cd /d %~dp0
 rem Set codepage
 chcp 437
 rem Set title
-title ETHminer WatchDog v%V% by DeadManWalking
+title ETHminer WatchDog Version %V% by DeadManWalking
 
 rem ========== Start ==========
 
 cls
 echo ###############################################################################
 echo.
-echo   ETHminerWatchDogDmW v%V%
+echo   ETHminerWatchDogDmW Version %V%
 echo.
 echo   AUTHOR: DeadManWalking  (DeadManWalkingTO-GitHub)
 echo.
@@ -30,17 +30,17 @@ echo 2. Restart ethminer up to 10 times.
 echo 3. Reboot the system.
 echo.
 echo Additional:
-echo - AutoFix #385 issue of ethminer
-echo - AutoFix #189 issue of ethminer
+echo - AutoFix #385 issue of Ethminer
+echo - AutoFix #189 issue of Ethminer
 echo - Log file RunTimes.log
 echo.
 
-rem Skip RunEthminerCommand section at start
+rem Skip RunEthMinerCommand section at start
 goto Initializing
 
-rem ========== Run ethminer Command ==========
+rem ========== Run EthMiner Command ==========
 
-:RunEthminerCommand
+:RunEthMinerCommand
 
 rem ==================== Your Code Starts Here ====================
 
@@ -61,7 +61,7 @@ rem ========== Initializing ==========
 rem set loop to zero
 set /A loopnum=0
 set FileOut=RunTimes.log
-echo ETHminerWatchDogDmW v%V%>>%FileOut%
+echo ETHminerWatchDogDmW Version %V% >> %FileOut%
 
 rem ========== Run Program ==========
 
@@ -72,26 +72,26 @@ rem ========== Calc ==========
 rem Increment loop by one
 set /A loopnum=loopnum+1
 
-rem Calculate date & time
+rem Calculate Date & Time
 :DateTime
 rem Check if WMIC is available
-WMIC.exe Alias /? >nul 2>&1 || goto wmicError
+WMIC.EXE Alias /? >nul 2>&1 || goto wmicError
 rem Use WMIC to retrieve date and time
-for /f "skip=1 tokens=1-6" %%G in ('WMIC Path Win32_LocalTime Get Day^,Hour^,Minute^,Month^,Second^,Year /Format:table') do (
-  if "%%~L"=="" goto wmicDone
-  set _yyyy=%%L
-  set _mm=00%%J
-  set _dd=00%%G
-  set _hour=00%%H
-  set _minute=00%%I
+for /F "skip=1 tokens=1-6" %%G in ('WMIC Path Win32_LocalTime Get Day^,Hour^,Minute^,Month^,Second^,Year /Format:table') do (
+   if "%%~L"=="" goto wmicDone
+      set _yyyy=%%L
+      set _mm=00%%J
+      set _dd=00%%G
+      set _hour=00%%H
+      set _minute=00%%I
 )
 :wmicDone
 
 rem Pad digits with leading zeros
-set _mm=%_mm:~-2%
-set _dd=%_dd:~-2%
-set _hour=%_hour:~-2%
-set _minute=%_minute:~-2%
+      set _mm=%_mm:~-2%
+      set _dd=%_dd:~-2%
+      set _hour=%_hour:~-2%
+      set _minute=%_minute:~-2%
 
 rem Date/time in ISO 8601 format:
 set pISOdate=%_yyyy%-%_mm%-%_dd% %_hour%:%_minute%
@@ -122,10 +122,10 @@ echo %pISOdate% ETHminerWatchDogDmW has run %loopnum% times.>>%FileOut%
 
 rem ========== Execution Code ==========
 
-call :RunEthminerCommand
+call :RunEthMinerCommand
 
 rem Wait 5s
-timeout /t 5 > NUL
+timeout /T 5 /NOBREAK>NUL
 
 rem Check 10 loops
 if %loopnum% gtr 9 goto ErrorHandling
@@ -154,9 +154,9 @@ echo.
 rem ========== Error File Output ==========
 
 echo %pISOdate% ETHminerWatchDogDmW has run %loopnum% times.>>%FileOut%
-echo System restart required; rebooting now (%pISOdate%).>>%FileOut%
-echo.>>%FileOut%
-echo.>>%FileOut%
+echo System restart required. Rebooting now (%pISOdate%).>>%FileOut%
+echo. >>%FileOut%
+echo. >>%FileOut%
 
 rem ========== System Reboot ==========
 
