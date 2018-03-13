@@ -5,7 +5,7 @@ rem Don't echo to standard output
 rem Make script variables local
 setlocal
 rem Set version info
-set V=1.9.1
+set V=1.9.2
 rem Switch to the batch file's directory
 cd /d %~dp0
 rem Set codepage
@@ -49,6 +49,10 @@ setx GPU_MAX_HEAP_SIZE 100
 setx GPU_USE_SYNC_OBJECTS 1
 setx GPU_MAX_ALLOC_PERCENT 100
 setx GPU_SINGLE_ALLOC_PERCENT 100
+
+rem set NO_COLOR=Yes
+set CUDA_DEVICE_ORDER=PCI_BUS_ID 
+
 ethminer.exe -RH -X -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
 
 rem ==================== Your Code Ends Here ====================
