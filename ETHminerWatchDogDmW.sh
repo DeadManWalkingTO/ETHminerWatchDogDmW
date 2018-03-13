@@ -32,11 +32,11 @@ RunEthMinerCommand()
 
 #==================== Your Code Starts Here ====================
 
-export GPU_FORCE_64BIT_PTR 0
-export GPU_MAX_HEAP_SIZE 100
-export GPU_USE_SYNC_OBJECTS 1
-export GPU_MAX_ALLOC_PERCENT 100
-export GPU_SINGLE_ALLOC_PERCENT 100
+export GPU_FORCE_64BIT_PTR=0
+export GPU_MAX_HEAP_SIZE=100
+export GPU_USE_SYNC_OBJECTS=1
+export GPU_MAX_ALLOC_PERCENT=100
+export GPU_SINGLE_ALLOC_PERCENT=100
 
 #export NO_COLOR=Yes
 export CUDA_DEVICE_ORDER=PCI_BUS_ID
