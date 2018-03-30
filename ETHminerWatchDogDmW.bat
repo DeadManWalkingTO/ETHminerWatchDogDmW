@@ -1,15 +1,45 @@
+rem Skip RunEthMinerCommand section at start
+goto PreStart
+
+rem ========== Run EthMiner Command ==========
+
+:RunEthMinerCommand
+
+rem ==================== Your Code Starts Here ====================
+rem ==================== Your Code Starts Here ====================
+rem ==================== Your Code Starts Here ====================
+
+setx GPU_FORCE_64BIT_PTR 0
+setx GPU_MAX_HEAP_SIZE 100
+setx GPU_USE_SYNC_OBJECTS 1
+setx GPU_MAX_ALLOC_PERCENT 100
+setx GPU_SINGLE_ALLOC_PERCENT 100
+
+rem set NO_COLOR=Yes
+set CUDA_DEVICE_ORDER=PCI_BUS_ID 
+
+ethminer.exe -RH -X --exit -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW -FS us1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
+
+rem ==================== Your Code Ends Here ====================
+rem ==================== Your Code Ends Here ====================
+rem ==================== Your Code Ends Here ====================
+
+exit /b
+
 rem ========== PreStart ==========
+
+:PreStart
 
 rem Don't echo to standard output
 @echo off
 rem Make script variables local
 setlocal
 rem Set version info
-set V=1.9.2
+set V=1.9.4
 rem Switch to the batch file's directory
 cd /d %~dp0
 rem Set codepage
-chcp 437
+chcp 437 >nul
 rem Set title
 title ETHminer WatchDog Version %V% by DeadManWalking
 
@@ -33,31 +63,8 @@ echo Additional:
 echo - AutoFix #385 issue of Ethminer
 echo - AutoFix #189 issue of Ethminer
 echo - Log file RunTimes.log
+echo - Auto Turn off the Error Dialog
 echo.
-
-rem Skip RunEthMinerCommand section at start
-goto Initializing
-
-rem ========== Run EthMiner Command ==========
-
-:RunEthMinerCommand
-
-rem ==================== Your Code Starts Here ====================
-
-setx GPU_FORCE_64BIT_PTR 0
-setx GPU_MAX_HEAP_SIZE 100
-setx GPU_USE_SYNC_OBJECTS 1
-setx GPU_MAX_ALLOC_PERCENT 100
-setx GPU_SINGLE_ALLOC_PERCENT 100
-
-rem set NO_COLOR=Yes
-set CUDA_DEVICE_ORDER=PCI_BUS_ID 
-
-ethminer.exe -RH -X -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
-
-rem ==================== Your Code Ends Here ====================
-
-exit /b
 
 rem ========== Initializing ==========
 
@@ -66,6 +73,7 @@ rem set loop to zero
 set /A loopnum=0
 set FileOut=RunTimes.log
 echo ETHminerWatchDogDmW Version %V% >> %FileOut%
+reg add "HKCU\SOFTWARE\Microsoft\Windows\Windows Error Reporting" /v "DontShowUI" /t REG_DWORD /d 1 /f > nul 2>&1
 
 rem ========== Run Program ==========
 
