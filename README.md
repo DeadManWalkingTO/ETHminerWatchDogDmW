@@ -45,6 +45,7 @@ ETHminerWatchDogDmW:
 * AutoFix [#189](https://github.com/ethereum-mining/ethminer/issues/189) issue of Ethminer.
 * AutoFix [#385](https://github.com/ethereum-mining/ethminer/issues/385) issue of Ethminer.
 * Log file `RunTimes.log`.
+* Auto Turn off the Error Dialog (Windows).
 * On all systems, it is necessary for the user to have reboot permissions.
   * Οn Linux systems create a file `/etc/sudoers.d/reboot` with `username ALL=NOPASSWD:/sbin/reboot`
 
