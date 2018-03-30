@@ -1,9 +1,35 @@
 #!/bin/bash
 
+#========== Run EthMiner Command ==========
+
+RunEthMinerCommand()
+{
+
+#==================== Your Code Starts Here ====================
+#==================== Your Code Starts Here ====================
+#==================== Your Code Starts Here ====================
+
+export GPU_FORCE_64BIT_PTR=0
+export GPU_MAX_HEAP_SIZE=100
+export GPU_USE_SYNC_OBJECTS=1
+export GPU_MAX_ALLOC_PERCENT=100
+export GPU_SINGLE_ALLOC_PERCENT=100
+
+#export NO_COLOR=Yes
+export CUDA_DEVICE_ORDER=PCI_BUS_ID
+
+./ethminer -RH -X --exit -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW -FS us1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
+
+#==================== Your Code Ends Here ====================
+#==================== Your Code Ends Here ====================
+#==================== Your Code Ends Here ====================
+
+}
+
 #========== PreStart ==========
 
 #Set version info
-V=1.9.2
+V=1.9.4
 
 #========== Start ==========
 
@@ -24,28 +50,6 @@ echo #
 echo 'Additional:'
 echo '- Log file RunTimes.log'
 echo #
-
-#========== Run EthMiner Command ==========
-
-RunEthMinerCommand()
-{
-
-#==================== Your Code Starts Here ====================
-
-export GPU_FORCE_64BIT_PTR=0
-export GPU_MAX_HEAP_SIZE=100
-export GPU_USE_SYNC_OBJECTS=1
-export GPU_MAX_ALLOC_PERCENT=100
-export GPU_SINGLE_ALLOC_PERCENT=100
-
-#export NO_COLOR=Yes
-export CUDA_DEVICE_ORDER=PCI_BUS_ID
-
-./ethminer -RH -X -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
-
-#==================== Your Code Ends Here ====================
-
-}
 
 #========== Initializing ==========
 
