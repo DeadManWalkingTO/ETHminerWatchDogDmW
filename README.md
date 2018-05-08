@@ -5,12 +5,16 @@
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../releases/latest)
 [![GitHub top language](https://img.shields.io/github/languages/top/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
-[![GitHub license](https://img.shields.io/github/license/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](./LICENSE)
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
 [![Github commits (since latest release)](https://img.shields.io/github/commits-since/DeadManWalkingTO/ETHminerWatchDogDmW/latest.svg)](../../)
 [![GitHub stars](https://img.shields.io/github/stars/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../network)
+[![GitHub issues](https://img.shields.io/github/issues/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../issues)
+
+[![DMCA Protection](https://img.shields.io/badge/DMCA-Protected-brightgreen.svg)](https://www.dmca.com/Takedowns.aspx?r=m)
+[![GitHub license](https://img.shields.io/github/license/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](./LICENSE)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](./README.md)
 
 > [ETHminer](https://github.com/ethereum-mining/ethminer) WatchDog by [DeadManWalking (DeadManWalkingTO-GitHub)](https://github.com/DeadManWalkingTO)
