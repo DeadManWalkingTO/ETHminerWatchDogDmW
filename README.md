@@ -4,6 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/DeadManWalkingTO/ETHminerWatchDogDmW/all.svg)](../../releases/latest)
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../releases/latest)
 [![GitHub top language](https://img.shields.io/github/languages/top/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
+[![GitHub language count](https://img.shields.io/github/languages/count/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
