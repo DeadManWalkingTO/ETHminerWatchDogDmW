@@ -29,7 +29,7 @@ export CUDA_DEVICE_ORDER=PCI_BUS_ID
 #export NO_COLOR=Yes
 
 #Set version info
-V=1.9.4
+V=1.9.5
 
 
 
