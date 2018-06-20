@@ -9,15 +9,6 @@ rem ==================== Your Code Starts Here ====================
 rem ==================== Your Code Starts Here ====================
 rem ==================== Your Code Starts Here ====================
 
-setx GPU_FORCE_64BIT_PTR 0
-setx GPU_MAX_HEAP_SIZE 100
-setx GPU_USE_SYNC_OBJECTS 1
-setx GPU_MAX_ALLOC_PERCENT 100
-setx GPU_SINGLE_ALLOC_PERCENT 100
-
-rem set NO_COLOR=Yes
-set CUDA_DEVICE_ORDER=PCI_BUS_ID 
-
 ethminer.exe -RH -X --exit -S eu1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW -FS us1.ethermine.org:4444 -O 0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW
 
 rem ==================== Your Code Ends Here ====================
@@ -32,6 +23,14 @@ rem ========== PreStart ==========
 
 rem Don't echo to standard output
 @echo off
+rem EthMiner Variables
+setx GPU_FORCE_64BIT_PTR 0
+setx GPU_MAX_HEAP_SIZE 100
+setx GPU_USE_SYNC_OBJECTS 1
+setx GPU_MAX_ALLOC_PERCENT 100
+setx GPU_SINGLE_ALLOC_PERCENT 100
+setx CUDA_DEVICE_ORDER PCI_BUS_ID
+rem set NO_COLOR=Yes
 rem Make script variables local
 setlocal
 rem Set version info
