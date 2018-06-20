@@ -23,7 +23,7 @@ rem ========== PreStart ==========
 
 rem Don't echo to standard output
 @echo off
-rem EthMiner Variables
+rem Set EthMiner Variables
 setx GPU_FORCE_64BIT_PTR 0
 setx GPU_MAX_HEAP_SIZE 100
 setx GPU_USE_SYNC_OBJECTS 1
@@ -34,7 +34,7 @@ rem set NO_COLOR=Yes
 rem Make script variables local
 setlocal
 rem Set version info
-set V=1.9.4
+set V=1.9.5
 rem Switch to the batch file's directory
 cd /d %~dp0
 rem Set codepage
