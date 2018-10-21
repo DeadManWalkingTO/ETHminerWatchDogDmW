@@ -9,7 +9,7 @@ rem ==================== Your Code Starts Here ====================
 rem ==================== Your Code Starts Here ====================
 rem ==================== Your Code Starts Here ====================
 
-ethminer.exe --farm-recheck 6000 -R --display-interval 10 --exit -X -P stratum+ssl://0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW@eu1.ethermine.org:5555  
+ethminer.exe --farm-recheck 6000 -R --display-interval 10 --exit -X -P stratum1+tcp://0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW@eu1.ethermine.org:4444 -P stratum1+tcp://0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW@eu1.ethermine.org:14444
 
 rem ==================== Your Code Ends Here ====================
 rem ==================== Your Code Ends Here ====================
@@ -34,7 +34,7 @@ rem set NO_COLOR=Yes
 rem Make script variables local
 setlocal
 rem Set version info
-set V=1.9.6
+set V=1.9.7
 rem Switch to the batch file's directory
 cd /d %~dp0
 rem Set codepage
