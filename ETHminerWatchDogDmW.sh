@@ -9,7 +9,7 @@ RunEthMinerCommand()
 #==================== Your Code Starts Here ====================
 #==================== Your Code Starts Here ====================
 
-./ethminer --farm-recheck 6000 -R --display-interval 10 --exit -X -P stratum+ssl://0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW@eu1.ethermine.org:5555  
+./ethminer --farm-recheck 6000 -R --display-interval 10 --exit -X -P stratum1+tcp://0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW@eu1.ethermine.org:4444 -P stratum1+tcp://0x7013275311fc37ccc1e40193D75086293eCb43A4.ETHminerWatchDogDmW@eu1.ethermine.org:14444
 
 #==================== Your Code Ends Here ====================
 #==================== Your Code Ends Here ====================
@@ -29,9 +29,7 @@ export CUDA_DEVICE_ORDER=PCI_BUS_ID
 #export NO_COLOR=Yes
 
 #Set version info
-V=1.9.6
-
-
+V=1.9.7
 
 #========== Start ==========
 
