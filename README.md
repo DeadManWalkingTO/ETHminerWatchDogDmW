@@ -26,15 +26,16 @@ Working on Windows (7 / 8 / 10) [x86 / x64] and Linux (Any Dist / Any Ver / Any 
 
 ## Table of Contents
 
-* [Features](#features)
-* [Download](#download)
-* [Install](#install)
-* [Usage](#usage)
-* [Feedback](#feedback)
-* [Maintainers](#maintainers)
-* [Contribute](#contribute)
-* [License](#license)
-* [Donations](#donations)
+- [Features](#features)
+- [Download](#download)
+- [Install](#install)
+- [Usage](#usage)
+- [Feedback](#feedback)
+- [Maintainers](#maintainers)
+- [Contribute](#contribute)
+- [License](#license)
+- [Donations](#donations)
+- [Common Issues](#common-issues)
 
 ## Features
 
@@ -105,3 +106,11 @@ Monero Address (XMR):
 
 Aeon Address (AEON):
 * WmssXd9iiPCjjhfVyqYvPzhBuPKkZ5wkVXP5q8L7aYxfPJG5Z8nLyLJXUzxMeuvna9dCEBAmqBzCRWezF6AQqUS51EDJtjAYL
+
+## Common Issues
+
+#### Make date locale-independent:
+Issue [#3](../../issues/3) | Status: **Solved**.
+#### How can i edit the bat:
+Issue [#4](../../issues/4) | Status: **Solved**.
+
