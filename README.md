@@ -109,8 +109,8 @@ Aeon Address (AEON):
 
 ## Common Issues
 
-#### Make date locale-independent:
-Issue [#3](../../issues/3) | Status: **Solved**.
 #### How can i edit the bat:
 Issue [#4](../../issues/4) | Status: **Solved**.
+#### How to kill the process:
+Issue [#7](../../issues/7) | Status: **Solved**.
 
