@@ -115,3 +115,5 @@ Issue [#4](../../issues/4) | Status: **Solved**.
 Issue [#7](../../issues/7) | Status: **Solved**.
 #### On most systems shutdown or reboot needs sudo:
 Issue [#11](../../issues/11) | Status: **Solved**.
+#### ETHminerWatchDogDmW works both CUDA and AMD GPUs:
+Issue [#13](../../issues/13) | Status: **Solved**.
