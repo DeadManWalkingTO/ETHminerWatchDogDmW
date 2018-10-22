@@ -117,5 +117,5 @@ Issue [#7](../../issues/7) | Status: **Solved**.
 Issue [#11](../../issues/11) | Status: **Solved**.
 #### ETHminerWatchDogDmW works both CUDA and AMD GPUs:
 Issue [#13](../../issues/13) | Status: **Solved**.
-#### Warning: -S is deprecated:
+#### Warning: -S is deprecated. Use the -P parameter instead:
 Issue [#14](../../issues/14) | Status: **Solved**.
