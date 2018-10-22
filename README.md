@@ -113,4 +113,5 @@ Aeon Address (AEON):
 Issue [#4](../../issues/4) | Status: **Solved**.
 #### How to kill the process:
 Issue [#7](../../issues/7) | Status: **Solved**.
-
+#### On most systems shutdown or reboot needs sudo:
+Issue [#11](../../issues/11) | Status: **Solved**.
