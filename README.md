@@ -22,8 +22,20 @@
 
 ETHminerWatchDogDmW is a simple script (Windows/Linux) WachDog for [ETHminer](https://github.com/ethereum-mining/ethminer).
 
-Working on Windows (7 / 8 / 10) [x86 / x64] and Linux (Any Dist / Any Ver / Any Arch).
-
+- Supported Operating System
+  - Windows (All versions)
+    - Windows (7 / 8 / 10)
+    - Windows Server (2008 / 2012 / 2016 / 2019)
+  - Linux
+    - Any Distribution
+    - Any Version
+  - Unix
+    - Any Distribution and Version compatible with BASH
+  
+- Supported Architectures:
+  - x86
+  - x64
+  
 ## Table of Contents
 
 - [Features](#features)
