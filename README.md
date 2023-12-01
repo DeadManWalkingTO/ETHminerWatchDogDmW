@@ -1,6 +1,6 @@
 # ETHminerWatchDogDmW
 
-[![HitCount](http://hits.dwyl.io/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
+[![Hits](https://hits.sh/github.com/Fosscomm2019/Fosscomm2019.svg?style=plastic&label=HitCount)](../../)
 [![GitHub release](https://img.shields.io/github/release/DeadManWalkingTO/ETHminerWatchDogDmW/all.svg)](../../releases/latest)
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../releases/latest)
 [![GitHub top language](https://img.shields.io/github/languages/top/DeadManWalkingTO/ETHminerWatchDogDmW.svg)](../../)
